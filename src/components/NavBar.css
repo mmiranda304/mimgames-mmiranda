@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    font-family: 'Comfortaa', cursive;
+}
+
+nav h1 {
+    font-size: 18px;
+    color: whitesmoke;
+    font-family: 'Comfortaa', cursive;
+    border: 1px solid whitesmoke;
+    border-radius: 7px;
+    padding: 15px 10px;
+}
+nav a {
+    padding: 10px;
+    text-decoration: none;
+    color: azure;
+}
+
+nav a:hover {
+    font-weight: bold;
+    font-style: italic;
+}
