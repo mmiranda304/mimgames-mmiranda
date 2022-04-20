@@ -1,17 +1,19 @@
 import React from 'react';
+import logo from '../assets/BrandLogo.jpg';
 import './NavBar.css';
+import CartWidget from '../CartWidget/CartWidget'
 
-function NavBar(props) {
+function NavBar() {
     return (
         <nav>
-            <h1>MIM Games</h1>
+            <a href='#'><img src={logo} alt="logo" /></a>
             <ul>
                 <a href='#'>Home</a>
                 <a href='#'>Tienda</a>
                 <a href='#'>Contacto</a>
             </ul>
+            <CartWidget/>
         </nav>
     );
 }
-
 export default NavBar;
