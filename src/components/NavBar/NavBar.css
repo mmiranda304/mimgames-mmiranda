@@ -10,10 +10,12 @@ nav {
     background-color: black;
     font-family: 'Comfortaa', cursive;
 }
-
 nav img {
     height: 80px;
     font-size: 6px;
+}
+nav ul {
+    margin: 0px;
 }
 nav ul a {
     padding: 10px;
@@ -28,9 +30,8 @@ nav #CartWidget {
     color: azure;
     cursor: pointer;
 }
- 
 nav a:hover {
     font-weight: bold;
     font-style: italic;
-
+    color: azure;
 }
