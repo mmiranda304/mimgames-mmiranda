@@ -6,7 +6,8 @@ import IMG_BHOUSEHILL from '../img/BHH_2.jpg'
 import IMG_TTBURRITO from '../img/TTBURR_1.jpg'
 
 function ItemListContainer({greeting}) {  
-
+  
+  const [products, setProducts] = useState([]);
   const onAdd = () => {     /* En cumplimiento con desafío N° 4 */
     return console.log("Agregado al carrito");
   }
@@ -31,7 +32,6 @@ function ItemListContainer({greeting}) {
       img:    IMG_TTBURRITO
     }
   ];
-  const [products, setProducts] = useState([]);
 
   function getItems() {
     const myPromise = new Promise((resolve, reject) => {
@@ -42,7 +42,7 @@ function ItemListContainer({greeting}) {
     return myPromise;
   }
   getItems()
-    .then(res => {setProducts(itemsBknd)});
+    .then(res => {setProducts(res)});
   /********************************************************* */
   
   return (
