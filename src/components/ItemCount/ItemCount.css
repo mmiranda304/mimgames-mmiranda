@@ -8,11 +8,11 @@
 .keypad-cart {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     margin: auto;
-    width: 50%;
+    width: 70%;
     font-size: 16px;
 }
 .Quantity {

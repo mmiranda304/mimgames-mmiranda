@@ -9,6 +9,7 @@ function NavBar() {
             <a href='#'><img src={logo} alt="logo" /></a>
             <ul>
                 <a href='#'>Home</a>
+                {/*<Link to="/home">Inicio</Link>*/}
                 <a href='#'>Tienda</a>
                 <a href='#'>Contacto</a>
             </ul>

@@ -4,32 +4,56 @@ import ItemList from '../ItemList/ItemList'
 import IMG_BUNNYKINGDOM from '../img/BUNKIN_1.jpg'
 import IMG_BHOUSEHILL from '../img/BHH_2.jpg'
 import IMG_TTBURRITO from '../img/TTBURR_1.jpg'
+import IMG_NLTNUP from '../img/NLTNUP_1.jpg'
 
 function ItemListContainer({greeting}) {  
   
   const [products, setProducts] = useState([]);
-  const onAdd = () => {     /* En cumplimiento con desafío N° 4 */
-    return console.log("Agregado al carrito");
-  }
-  /* Desafío N° 5 - Simulación de retrasos de red al recibir datos */
+
   const itemsBknd = [
     {
       id:      1,
       title:  'Bunny Kingdom',
-      price:  '$13401',
-      img:    IMG_BUNNYKINGDOM
+      price:  '$13.401',
+      img:    IMG_BUNNYKINGDOM,
+      stock:  6,
+      category: 'family',
+      players:  '2-4 jugadores',
+      age:    '14+',
+      ptime:  '45 min.'
     },
     {
       id:      2,
       title:  'Betrayal at House on the Hill',
-      price:  '$13.410',
-      img:    IMG_BHOUSEHILL
+      price:  '$13.490',
+      img:    IMG_BHOUSEHILL,
+      stock:  2,
+      category: 'strategy',
+      players:  '3-6',
+      age:    '12+',
+      ptime:  '60 min.'
     },
     {
       id:      3,
       title:  'Throw Throw Burrito',
-      price:  '$21.560',
-      img:    IMG_TTBURRITO
+      price:  '$9.040',
+      img:    IMG_TTBURRITO,
+      stock:  10,
+      category: 'family',
+      players:  '2-6',
+      age:    '7+',
+      ptime:  '60 min'
+    },
+    {
+      id:      4,
+      title:  'No lo testeamos ni un poco',
+      price:  '$1.750',
+      img:    IMG_NLTNUP,
+      stock:  12,
+      category: 'cards',
+      players:  '2-6',
+      age:    '7+',
+      ptime:  '60 min'
     }
   ];
 
@@ -43,7 +67,6 @@ function ItemListContainer({greeting}) {
   }
   getItems()
     .then(res => {setProducts(res)});
-  /********************************************************* */
   
   return (
     <>
