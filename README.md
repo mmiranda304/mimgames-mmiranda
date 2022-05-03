@@ -2,7 +2,7 @@
 This is a Boardgames E-Commerce store project.
 
 
-##Technologies
+## Technologies
 * Project created with:
 * Node Package Manager: 8.5.0
 * React App: 18.0.0
