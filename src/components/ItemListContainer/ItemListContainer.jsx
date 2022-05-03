@@ -13,6 +13,10 @@ function ItemListContainer({greeting}) {
     .then(res => { 
       categoryId  ? setProducts(res.filter(item => item.category === categoryId))
                   : setProducts(res);     
+    })
+    .catch(err => {
+      console.log(err);
+      alert("Catch Error! Check console");
     });
   }, [categoryId]);
 

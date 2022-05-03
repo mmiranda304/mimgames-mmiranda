@@ -12,7 +12,11 @@ function ItemDetailContainer() {
 
   useEffect(() => {
     getItem(id)
-      .then(res => {setProduct(res)});
+      .then(res => {setProduct(res)})
+      .catch(err => {
+        console.log(err);
+        alert("Catch Error! Check console");
+      });
   }, [id]);
   
   
