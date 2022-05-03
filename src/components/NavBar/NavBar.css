@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
 
-nav {
-    list-style-type: none;
+.navBar-container {
     margin: 0;
     padding: 0;
     display: flex;
@@ -10,28 +9,55 @@ nav {
     background-color: black;
     font-family: 'Comfortaa', cursive;
 }
-nav img {
+img {
     height: 80px;
     font-size: 6px;
 }
-nav ul {
-    margin: 0px;
-}
-nav ul a {
-    padding: 10px;
-    font-size: 16px;
-    text-decoration: none;
-    color: azure;
-}
-nav #CartWidget {
+#CartWidget {
     padding: 10px;
     font-size: 24px;
     text-decoration: none;
     color: azure;
     cursor: pointer;
 }
-nav a:hover {
-    font-weight: bold;
-    font-style: italic;
+nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+.navLink, .dropdown-link, .dropdown-btn {
+    text-decoration: none;
     color: azure;
 }
+.navLink:hover, .dropdown-link:hover, .dropdown-btn:hover {
+    font-weight: bold;
+    color: azure;
+}
+.dropdown, .dropdown-btn, nav .navLink {
+    padding: 10px 10px;
+}
+.dropdown button {
+    border: none;
+    outline: none;
+    background-color: black;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    background-color: black;
+    border: 1px solid black;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+  }
+.dropdown-content .dropdown-link {
+    display: block;
+    float: none;
+    padding: 8px;
+    text-align: left;
+}
+.dropdown-content .dropdown-link:hover {
+    background-color: white;
+    color: black;
+} 

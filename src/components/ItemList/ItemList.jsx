@@ -3,8 +3,7 @@ import './ItemList.css'
 import Item from '../Item/Item'
 
 function ItemList({items}) {
-    
-    return (
+  return (
     <div className='item-list'>
         {items.map( (item, i) => <Item item={item} key={item.id} /> )}
     </div>

@@ -1,43 +1,24 @@
 import React, {useState, useEffect} from 'react'
-import './ItemDetailContainer.css'
+import {useParams} from 'react-router-dom'
+import {getItem} from '../Utilities.js'
 import ItemDetail from '../ItemDetail/ItemDetail'
-import IMG_BUNNYKINGDOM from '../img/BUNKIN_1.jpg'
-import IMG_BHOUSEHILL from '../img/BHH_2.jpg'
-import IMG_TTBURRITO from '../img/TTBURR_1.jpg'
-import IMG_NLTNUP from '../img/NLTNUP_1.jpg'
 
 function ItemDetailContainer() {
-
-const onAdd = () => {     /* En cumplimiento con desafío N° 4 */
-  return console.log("Agregado al carrito");
-}
-  const [product, setProduct] = useState([]);
-  const itemBknd = {
-    id:      1,
-    title:  'Bunny Kingdom',
-    price:  '$13.401',
-    img:    IMG_BUNNYKINGDOM,
-    stock:  10,
-    category: 'family',
-    players:  '2-4',
-    age:    '14+',
-    gtime:  '45 min.'
-  };
-
-  function getItem() {
-    const myPromise = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(itemBknd);
-      }, 2000);
-    });
-    return myPromise;
+  const [products, setProduct] = useState([]);
+  const {id} = useParams();
+  const onAdd = () => {     /* En cumplimiento con desafío N° 4 */
+    return console.log("Agregado al carrito");
   }
-  getItem()
-  .then(res => {setProduct(res)});
+
+  useEffect(() => {
+    getItem(id)
+      .then(res => {setProduct(res)});
+  }, [id]);
+  
   
   return (
     <>
-      <ItemDetail item={product} onAdd={onAdd} />
+      <ItemDetail item={products} onAdd={onAdd} />
     </>
   );
 } 

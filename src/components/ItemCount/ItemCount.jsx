@@ -20,6 +20,6 @@ function ItemCount({stock, initial, onAdd }) {
       </div>
         <button className='btn-cart' onClick={ () => {(cuenta<=stock)?onAdd():console.log("No hay stock")} } >Agregar al carrito</button>
     </div>
-  )
+  );
 }
 export default ItemCount

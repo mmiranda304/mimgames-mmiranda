@@ -1,12 +1,12 @@
 .itemDetail {
-    margin: 1.25rem auto;
-    width: 350px;
-    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    margin: 1.25rem auto;
+    width: 350px;
+    padding: 20px;
     font-family: 'Segoe UI', sans-serif;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: 0.25rem;
@@ -23,8 +23,8 @@
     
 }
 .itemDetail-body .item-title {
-    color: #272622;
     margin-bottom: 1rem;
+    color: #272622;
 }
 
 .itemDetail-body .item-price {
@@ -35,8 +35,8 @@
 .specs {
     margin-bottom: 0.1rem;
 }
-.specs p{
-    color: #8C8C84;
+.specs p {
     margin: 0;
     padding: 0.1rem;
+    color: #8C8C84;
 }
