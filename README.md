@@ -12,7 +12,11 @@ This is a Boardgames E-Commerce store project.
 To run this project install it locally using npm:
 
 $ cd ../mimgames-mmiranda
+
 $ npm install
+
 $ npm install react-icons --save
+
 $ npm start
 
+$ Go to http://localhost:3000/ 
