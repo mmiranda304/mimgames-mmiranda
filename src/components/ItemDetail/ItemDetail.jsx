@@ -1,9 +1,13 @@
-import React from 'react'
+import React, {useState} from 'react'
 import  './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount.jsx'
+import ItemDetailCart from '../ItemDetailCart/ItemDetailCart';
 
-function ItemDetail({item, onAdd}) {
-  
+function ItemDetail({item}) {
+  const [cantProd, setCantProd] = useState(null);
+
+  const onAdd = (quantityToAdd) => { setCantProd(quantityToAdd) }
+
   return (
     <div className='itemDetail'>
       <div className='img-container'>
@@ -18,8 +22,9 @@ function ItemDetail({item, onAdd}) {
           <p className='items-gtime'>Tiempo de juego: {item?.ptime}</p>
           <p className='items-age'>Edad: {item?.age}</p>
         </div>
-        
-        <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />   {/* Desafío 4 */}
+
+        {cantProd ? <ItemDetailCart />   
+                  : <ItemCount className='it' stock={item.stock} initial={1} onAdd={onAdd} />}
       </div>
     </div>
   );

@@ -2,23 +2,28 @@ import React, {useState} from 'react'
 import './ItemCount.css'
 
 function ItemCount({stock, initial, onAdd }) {
-  const [cuenta, setCuenta] = useState(1);
+  const [quantityToAdd, setCuenta] = useState(initial);
   
   const handleAdd = () => {
-    ( (cuenta+1) <= stock ) ? setCuenta(cuenta+1) : setCuenta(cuenta);
+    ( (quantityToAdd+1) <= stock ) ? setCuenta(quantityToAdd+1) : setCuenta(quantityToAdd);
   }
   const handleTake = () => {
-    ( (cuenta-1) >= (initial) ) ? setCuenta(cuenta-1) : setCuenta(cuenta);
+    ( (quantityToAdd-1) >= (initial) ) ? setCuenta(quantityToAdd-1) : setCuenta(quantityToAdd);
   }
 
   return (
     <div className='item-count'>
-      <div className='keypad-cart'>
+      <div className='keypad-quantity'>
         <button className='btn-q' onClick={() => handleTake() } >-</button>
-        <p className='Quantity'> {cuenta} </p>
+        <p className='Quantity'> {quantityToAdd} </p>
         <button className='btn-q' onClick={() => handleAdd() } >+</button>
       </div>
-        <button className='btn-cart' onClick={ () => {(cuenta<=stock)?onAdd():console.log("No hay stock")} } >Agregar al carrito</button>
+      <div className='keypad-cart'>
+        <button className='btn-cartAdd' onClick={() => {(quantityToAdd<=stock) ? onAdd(quantityToAdd) : console.log("No hay stock")} } >
+          Agregar al carrito
+        </button>
+        
+      </div>
     </div>
   );
 }

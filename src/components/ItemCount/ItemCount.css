@@ -1,11 +1,12 @@
 .item-count {
     display: flex;
     flex-direction: column;
+    align-items: center;
     height: 100px;
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
 }
-.keypad-cart {
+.keypad-quantity {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -28,11 +29,9 @@
     border: none;
     border-radius: 50%;
 }
-.btn-cart {
-    display: inline-block;
-    margin: auto;
+.btn-cartAdd {
     padding: 5px 15px;
-    min-width: 150px;
+    width: 160px;
     font-size: 16px;
     background-color: #272622;
     color: white;
