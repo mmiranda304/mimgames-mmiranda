@@ -1,11 +1,11 @@
-import IMG_BUNNYKINGDOM from './img/BUNKIN_1.jpg'
-import IMG_BHOUSEHILL from './img/BHH_2.jpg'
-import IMG_TTBURRITO from './img/TTBURR_1.jpg'
-import IMG_NLTNUP from './img/NLTNUP_1.jpg'
-import IMG_CATAN from './img/CATAN_1.jpg'
-import IMG_HDP from './img/HDP_1.jpg'
-import IMG_VLLNS from './img/VLLNS_1.jpg'
-import IMG_AVTREN from './img/AVTREN_1.jpg'
+import IMG_BUNNYKINGDOM from '../components/assets/img/BUNKIN_1.jpg'
+import IMG_BHOUSEHILL from '../components/assets/img/BHH_2.jpg'
+import IMG_TTBURRITO from '../components/assets/img/TTBURR_1.jpg'
+import IMG_NLTNUP from '../components/assets/img/NLTNUP_1.jpg'
+import IMG_CATAN from '../components/assets/img/CATAN_1.jpg'
+import IMG_HDP from '../components/assets/img/HDP_1.jpg'
+import IMG_VLLNS from '../components/assets/img/VLLNS_1.jpg'
+import IMG_AVTREN from '../components/assets/img/AVTREN_1.jpg'
 
 const itemsBknd = [
     {

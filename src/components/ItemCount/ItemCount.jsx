@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
 import './ItemCount.css'
 
-function ItemCount({stock, initial, onAdd }) {
+function ItemCount({stock, initial, onAdd, item}) {
   const [quantityToAdd, setCuenta] = useState(initial);
-  
+
   const handleAdd = () => {
     ( (quantityToAdd+1) <= stock ) ? setCuenta(quantityToAdd+1) : setCuenta(quantityToAdd);
   }
@@ -19,10 +19,9 @@ function ItemCount({stock, initial, onAdd }) {
         <button className='btn-q' onClick={() => handleAdd() } >+</button>
       </div>
       <div className='keypad-cart'>
-        <button className='btn-cartAdd' onClick={() => {(quantityToAdd<=stock) ? onAdd(quantityToAdd) : console.log("No hay stock")} } >
+        <button className='btn-cartAdd' onClick={() => {(quantityToAdd<=stock) ? onAdd(item, quantityToAdd) : console.log("No hay stock")} } >
           Agregar al carrito
-        </button>
-        
+        </button>        
       </div>
     </div>
   );

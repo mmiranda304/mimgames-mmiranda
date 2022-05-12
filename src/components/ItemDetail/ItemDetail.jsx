@@ -1,12 +1,17 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import  './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount.jsx'
 import ItemDetailCart from '../ItemDetailCart/ItemDetailCart';
+import { CartContext } from '../../context/CartContext.js';
 
 function ItemDetail({item}) {
   const [cantProd, setCantProd] = useState(null);
+  const cartCtx = useContext(CartContext);
 
-  const onAdd = (quantityToAdd) => { setCantProd(quantityToAdd) }
+  const onAdd = (item, quantityToAdd) => {
+      setCantProd(quantityToAdd);
+      cartCtx.addItem(item,quantityToAdd);
+    }
 
   return (
     <div className='itemDetail'>
@@ -24,7 +29,7 @@ function ItemDetail({item}) {
         </div>
 
         {cantProd ? <ItemDetailCart />   
-                  : <ItemCount className='it' stock={item.stock} initial={1} onAdd={onAdd} />}
+                  : <ItemCount className='it' stock={item.stock} initial={1} onAdd={onAdd} item={item} />}
       </div>
     </div>
   );
