@@ -11,7 +11,7 @@ const itemsBknd = [
     {
         id:      0,
         title:  'Bunny Kingdom',
-        price:  '$13.401',
+        price:  13401,
         img:    IMG_BUNNYKINGDOM,
         stock:  6,
         category: 'family',
@@ -22,7 +22,7 @@ const itemsBknd = [
     {
         id:      1,
         title:  'Betrayal at House on the Hill',
-        price:  '$13.490',
+        price:  13490,
         img:    IMG_BHOUSEHILL,
         stock:  2,
         category: 'strategy',
@@ -33,7 +33,7 @@ const itemsBknd = [
     {
         id:      2,
         title:  'Throw Throw Burrito',
-        price:  '$9.040',
+        price:  9040,
         img:    IMG_TTBURRITO,
         stock:  10,
         category: 'family',
@@ -44,7 +44,7 @@ const itemsBknd = [
     {
         id:      3,
         title:  'No lo testeamos ni un poco',
-        price:  '$1.750',
+        price:  1750,
         img:    IMG_NLTNUP,
         stock:  12,
         category: 'cards',
@@ -55,7 +55,7 @@ const itemsBknd = [
     {
         id:      4,
         title:  'Catán',
-        price:  '$9.800',
+        price:  9800,
         img:    IMG_CATAN,
         stock:  4,
         category: 'strategy',
@@ -66,7 +66,7 @@ const itemsBknd = [
     {
         id:      5,
         title:  'H.D.P.',
-        price:  '$4.000',
+        price:  4000,
         img:    IMG_HDP,
         stock:  12,
         category: 'cards',
@@ -77,7 +77,7 @@ const itemsBknd = [
     {
         id:      6,
         title:  'Villainous',
-        price:  '$9.730',
+        price:  9730,
         img:    IMG_VLLNS,
         stock:  1,
         category: 'family',
@@ -88,7 +88,7 @@ const itemsBknd = [
     {
         id:      7,
         title:  'Aventureros al Tren!',
-        price:  '$11.890',
+        price:  11890,
         img:    IMG_AVTREN,
         stock:  2,
         category: 'family',

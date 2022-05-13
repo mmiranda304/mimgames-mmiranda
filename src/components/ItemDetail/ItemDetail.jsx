@@ -9,9 +9,9 @@ function ItemDetail({item}) {
   const cartCtx = useContext(CartContext);
 
   const onAdd = (item, quantityToAdd) => {
-      setCantProd(quantityToAdd);
-      cartCtx.addItem(item,quantityToAdd);
-    }
+    setCantProd(quantityToAdd);
+    cartCtx.addItem(item, quantityToAdd);
+  }
 
   return (
     <div className='itemDetail'>
@@ -21,7 +21,7 @@ function ItemDetail({item}) {
       
       <div className='itemDetail-body'>
         <h5 className='item-title'>{item?.title}</h5>
-        <p className='item-price'>{item?.price}</p>
+        <p className='item-price'>${item?.price}</p>
         <div className='specs'>
           <p className='item-players'>Cantidad de jugadores: {item?.players}</p>
           <p className='items-gtime'>Tiempo de juego: {item?.ptime}</p>

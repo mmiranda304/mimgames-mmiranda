@@ -7,7 +7,7 @@
     justify-content: space-around;
     align-items: center;
     background-color: black;
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Comfortaa', 'Open Sans', sans-serif;
 }
 img {
     height: 80px;

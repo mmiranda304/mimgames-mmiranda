@@ -15,8 +15,6 @@ $ cd ../mimgames-mmiranda
 
 $ npm install
 
-$ npm install react-icons --save
-
 $ npm start
 
 $ Go to http://localhost:3000/ 

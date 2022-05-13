@@ -1,0 +1,16 @@
+.cartWidget-container {
+    position: relative;
+}
+.bubble-quantity {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 30px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid black;
+    color: black;
+    background-color: aliceblue;
+    font-size: 10px;
+    font-weight: bold;
+}
