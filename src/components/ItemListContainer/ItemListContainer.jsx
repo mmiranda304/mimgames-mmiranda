@@ -4,7 +4,6 @@ import { getItems } from '../../utilities/Utilities.js'
 import './ItemListContainer.css'
 import ItemList from '../ItemList/ItemList'
 import Loader from '../Loader/Loader.jsx'
-import { collection, getDocs, getFirestore, query, where, limit } from 'firebase/firestore'
 
 function ItemListContainer({greeting}) {  
     const [products, setProducts] = useState([]);

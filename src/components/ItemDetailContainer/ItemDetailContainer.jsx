@@ -13,10 +13,8 @@ function ItemDetailContainer() {
     setLoading(true);
     getItem(id)
       .then(snapshot => {
-        if(snapshot.exists()){
-          setProduct( {id: snapshot.id, ...snapshot.data()} );
-          setLoading(false);
-        }
+        setProduct( {id: snapshot.id, ...snapshot.data()} );
+        setLoading(false);
       })
       .catch(err => {
         console.log(err);
@@ -31,12 +29,8 @@ function ItemDetailContainer() {
   }
   else {
     return (
-    <>
-      {/* <ItemDetail item={products} onAdd={onAdd} /> */}
       <ItemDetail item={product} />
-    </>
   );
   }
-  
 } 
 export default ItemDetailContainer
