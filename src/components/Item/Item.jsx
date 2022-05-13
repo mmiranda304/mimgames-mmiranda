@@ -8,7 +8,7 @@ function Item({item}) {
   return (
     <div className='item'>
         <div className='img-container'>
-            <img src={item?.img} />
+            <img src={item?.img} alt={item?.title} />
         </div>
         <div className='item-body'>
             <h5 className='item-title'>{item?.title}</h5>

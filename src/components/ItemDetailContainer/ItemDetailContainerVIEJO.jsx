@@ -5,23 +5,21 @@ import ItemDetail from '../ItemDetail/ItemDetail'
 import Loader from '../Loader/Loader.jsx';
 
 function ItemDetailContainer() {
-  const [product, setProduct] = useState([]);
+  const [products, setProduct] = useState([]);
   const [loading, setLoading] = useState(false);
   const {id} = useParams();
 
   useEffect(() => {
     setLoading(true);
     getItem(id)
-      .then(snapshot => {
-        if(snapshot.exists()){
-          setProduct( {id: snapshot.id, ...snapshot.data()} );
-          setLoading(false);
-        }
+      .then(res => {
+        setProduct(res);
+        setLoading(false);
       })
       .catch(err => {
         console.log(err);
         alert("Catch Error! Check console");
-      })
+      });
   }, [id]);
   
   if(loading) {
@@ -33,7 +31,7 @@ function ItemDetailContainer() {
     return (
     <>
       {/* <ItemDetail item={products} onAdd={onAdd} /> */}
-      <ItemDetail item={product} />
+      <ItemDetail item={products} />
     </>
   );
   }

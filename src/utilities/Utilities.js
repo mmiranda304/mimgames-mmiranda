@@ -6,6 +6,7 @@ import IMG_CATAN from '../components/assets/img/CATAN_1.jpg'
 import IMG_HDP from '../components/assets/img/HDP_1.jpg'
 import IMG_VLLNS from '../components/assets/img/VLLNS_1.jpg'
 import IMG_AVTREN from '../components/assets/img/AVTREN_1.jpg'
+import { collection, getDoc, getDocs, getFirestore, limit, query, where } from 'firebase/firestore'
 
 const itemsBknd = [
     {
@@ -98,21 +99,37 @@ const itemsBknd = [
     }
 ];
 
-function getItems() {
-    const myPromise = new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(itemsBknd);
-        }, 2000);
-    });
-    return myPromise;
+
+function getItems(category) {
+    const db = getFirestore();
+    const itemsCollection = collection(db, 'items');
+    if(category){
+        const q = query (
+            itemsCollection,
+            where('category', '==', category)
+        );
+        return getDocs(q);
+    }
+    const q = query (itemsCollection);
+    return getDocs(q);
 }
 
+// function getItem(itemId) {
+//     const myPromise = new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve(itemsBknd.find(item => item.id === parseInt(itemId)));
+//         }, 2000);
+//     });
+//     return myPromise;
+// }
 function getItem(itemId) {
-    const myPromise = new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(itemsBknd.find(item => item.id === parseInt(itemId)));
-        }, 2000);
-    });
-    return myPromise;
+    const db = getFirestore();
+    const itemsCollection = collection(db, 'items');
+    const q = query (
+        itemsCollection,
+        where('id', '==', itemId),
+        limit(1)
+    );
+    return getDoc(q);
 }
 export {getItems, getItem}
