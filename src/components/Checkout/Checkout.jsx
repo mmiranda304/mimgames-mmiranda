@@ -33,7 +33,7 @@ function Checkout() {
             setLoading(false);
         } 
         catch (error) { 
-            console.log("Catch error in generateOrder");
+            console.log("Catch error in generate Order");
         }
     }
 
@@ -43,7 +43,6 @@ function Checkout() {
         const items = cartCtx.products.map(e => {return {id:e.id, title:e.title, price:e.price, amount:e.quantity}});
         const total = cartCtx.getTotal();
         const data = {buyer, items, date, total};
-        console.log("data",data);
         generateOrder(data);
     }
 
