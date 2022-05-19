@@ -1,14 +1,12 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext'
+import { formatPrice } from '../../utilities/Utilities';
 import ItemCart from '../ItemCart/ItemCart'
 import './Cart.css'
 
 function Cart() {
     const cartCtx = useContext(CartContext);
-    const getPrice = () => {
-        return cartCtx.products.reduce((totalPrice, item) => totalPrice = totalPrice + (item.quantity * item.price), 0);
-    }
 
     if(cartCtx.products.length) {
         return (
@@ -16,9 +14,9 @@ function Cart() {
                     {cartCtx.products.map((item, i) => <ItemCart itemCart={item} key={item.id} />)}
                     <div className='cart-totals'>
                         <span>Total</span>
-                        <span>${getPrice()}</span>
+                        <span>${formatPrice(cartCtx.getTotal())}</span>
                     </div>
-                    <button className='btn-endBuy' >Terminar compra</button>
+                    <Link to={'/checkout'}> <button className='btn-endBuy' >Iniciar compra</button> </Link> 
                 </div>
             );
     }

@@ -1,7 +1,7 @@
-import { collection, doc, getDoc, getDocs, getFirestore, query, where } from 'firebase/firestore'
+import { collection, doc, getDoc, getDocs, query, where } from 'firebase/firestore'
+import db from '../services/firebase';
 
 function getItems(category) {
-    const db = getFirestore();
     const itemsCollection = collection(db, 'items');
     if(category){
         const q = query (
@@ -15,9 +15,13 @@ function getItems(category) {
 }
 
 function getItem(itemId) {
-    const db = getFirestore();
     const itemRef = doc(db, 'items', itemId);
-
     return getDoc(itemRef);
 }
-export {getItems, getItem}
+
+function formatPrice(price) {
+    if(price)
+     return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    return price;
+}
+export {getItems, getItem, formatPrice}

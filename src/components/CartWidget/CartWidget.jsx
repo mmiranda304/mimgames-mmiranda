@@ -21,6 +21,5 @@ function CartWidget() {
       <Link className='navLink' to={'/cart'}> <span id='CartWidget'> <FaShoppingCart/></span> </Link> 
     </div>
   )
-  
 }
 export default CartWidget
