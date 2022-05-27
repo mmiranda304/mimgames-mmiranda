@@ -1,6 +1,7 @@
 # MIM Games
 This is a Boardgames E-Commerce store project.
 
+Deployed in https://mimgames-mmiranda.vercel.app/
 
 ## Technologies
 * Project created with:
