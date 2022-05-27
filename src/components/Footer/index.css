@@ -1,0 +1,27 @@
+.footer-container {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    color: gray;
+    background-color: black;
+}
+.social-media {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.social-media a {
+    margin: 0.2em;
+    font-size: 25px;
+    color: #C2C2C0;
+}
+.social-media a:hover {
+    opacity: 0.5;
+}
+.copyright {
+    margin: 0.2rem;
+    text-align: center;
+    font-size: 12px;
+}

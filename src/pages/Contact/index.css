@@ -1,0 +1,16 @@
+.contact-container {
+    margin: auto;
+    padding: 20px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact-container a {
+    text-decoration: none;
+    color: black;
+}
+.contact-container a:hover {
+    font-weight: bold;
+}
