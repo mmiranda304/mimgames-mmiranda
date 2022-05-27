@@ -17,6 +17,7 @@
 .checkout-container .input-checkout{
     margin: 2px;
     width: 250px;
+    display: block;
 }
 .input-endBuy{
     margin: 5px 2px;

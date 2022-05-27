@@ -51,12 +51,10 @@ function Checkout() {
     return (
         <div>
             <h1 className='checkout-title'>Finalizar Compra</h1>
-            <hr />
             {(loading)
                 ? <Loader/>
                 :(!orderID && <div className='checkout-container'>
                     <h4>Completar datos</h4>
-                    <br />
                     <form onSubmit={handleSubmit}>
                         <input 
                             type="text" 
@@ -67,7 +65,6 @@ function Checkout() {
                             onChange={handleInputChange}
                             required
                         />
-                        <br />
                         <input 
                             type="email" 
                             name='Email' 
@@ -77,7 +74,6 @@ function Checkout() {
                             onChange={handleInputChange}
                             required
                         />
-                        <br />
                         <input 
                             type="text" 
                             name='Telefono' 
@@ -89,7 +85,6 @@ function Checkout() {
                             onChange={handleInputChange}
                             required
                         />
-                        <br />
                         <input 
                             type="submit" 
                             value="Finalizar Compra" 
