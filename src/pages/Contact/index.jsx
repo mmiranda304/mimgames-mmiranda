@@ -4,7 +4,7 @@ import './index.css'
 function Contact() {
   return (
     <>
-      <h1>Contáctanos</h1>
+      <h1 className='contact-title'>Contactanos</h1>
       <div className='contact-container'>
         <p className='schedule'>HORARIO DE ATENCIÓN: lunes a viernes 9 a 19 hs.</p>
         

@@ -21,9 +21,18 @@
 .item .item-body {
     padding: 1rem;
 }
+.item-text {
+    margin-bottom: 1rem; 
+    font-family: 'Open Sans','Segoe UI', sans-serif;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #272622;
+}
 .item-body .item-title {
     height: 60px;
     font-size: 1.25rem;
+    text-align: center;
     font-family: 'Open Sans','Segoe UI', sans-serif;
 }
 .item-body .button-item {

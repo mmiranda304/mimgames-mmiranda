@@ -34,12 +34,10 @@ nav {
     color: azure;
 }
 .dropdown, .dropdown-btn, nav .navLink {
-    padding: 10px 10px;
+    padding: 0px 10px; 
 }
-.dropdown button {
-    outline: none;
-    background-color: black;
-    border: none;
+nav .navLink {
+    padding-top: 1px; 
 }
 .dropdown-content {
     min-width: 160px;

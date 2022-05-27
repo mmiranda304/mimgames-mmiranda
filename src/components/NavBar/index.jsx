@@ -12,7 +12,7 @@ function NavBar() {
             <nav>
                 <Link className='navLink' to={'/'}>Inicio</Link>
                 <div className='dropdown'>
-                    <button><Link className='dropdown-link' to={'/'}>Tienda</Link></button>
+                    <Link className='dropdown-link' to={'/'}>Tienda</Link>
                     <div className='dropdown-content'>
                         <Link className='dropdown-link' to={'/category/strategy'}>Estrategia</Link>
                         <Link className='dropdown-link' to={'/category/family'}>Familiares</Link>

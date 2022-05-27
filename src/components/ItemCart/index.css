@@ -24,8 +24,14 @@
     padding: 20px 10px;
     width: 70%;
 }
-.item-price, .item-quantity {
-    margin-bottom: 2px;
+.cart body .item-price, .cart-body .item-quantity {
+    margin: 0.2rem 0;
+}
+.cart-body .item-price {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #272622;
 }
 .cart-button {
     margin: auto 10px;

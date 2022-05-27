@@ -50,7 +50,7 @@ function Checkout() {
 
     return (
         <div>
-            <h1>Finalizar Compra</h1>
+            <h1 className='checkout-title'>Finalizar Compra</h1>
             <hr />
             {(loading)
                 ? <Loader/>
@@ -102,8 +102,8 @@ function Checkout() {
             {orderID && (
                 <div className='checkout-container'>
                     <h4>Compra finalizada con éxito!</h4>
-                    <p>{`Su código de compra es: ${orderID}`}</p>
-                    <Link to={'/'}> <button className='btn-buy' >Realizar otra compra</button> </Link>
+                    <p>{`Tu código de compra es: ${orderID}`}</p>
+                    <Link to={'/'}> <button className='btn-buy' >Seguir comprando</button> </Link>
                 </div>)
             }
             </div>
